@@ -1,0 +1,37 @@
+package com.giang.kesach.ws;
+
+import com.giang.kesach.models.Account;
+import com.giang.kesach.resources.UserAccountResource;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
+
+
+@Path("login")
+public class WelcomeWs {
+    private UserAccountResource UAR=new UserAccountResource();
+    @POST
+    @Consumes({"application/json","application/xml"})
+    @Produces("application/json")
+    public Response login(Account account){
+        if(UAR.checkLoginInfo(account)==1)
+            return Response.ok().build();
+        return Response.status(Response.Status.NOT_FOUND).build();
+    }
+    @GET
+    @Consumes({"application/json","application/xml"})
+    @Produces("application/json")
+    public Account getAccount(Account account){
+        return UAR.accountIni(account);
+    }
+    @POST
+    @Path("new")
+    @Consumes({"application/json","application/xml"})
+    @Produces("application/json")
+    public Response signUp(Account account){
+        if(UAR.createNewAccount(account)!=0)
+            return Response.ok().build();
+        return Response.status(Response.Status.BAD_REQUEST).build();
+    }
+
+}

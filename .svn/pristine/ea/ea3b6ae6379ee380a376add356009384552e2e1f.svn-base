@@ -1,0 +1,32 @@
+package com.giang.kesach.ws;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.giang.kesach.models.Book;
+import com.giang.kesach.resources.ConnectToSql;  
+class MysqlCon{  
+public static List<Book> getBo(){  
+	List<Book> books=new ArrayList<>();
+try{  
+Class.forName("com.mysql.jdbc.Driver");  
+Connection con=ConnectToSql.getInstance().conn; 
+//here sonoo is database name, root is username and password  
+Statement stmt=con.createStatement();  
+ResultSet rs=stmt.executeQuery("select * from book");  
+while(rs.next())  {
+ Book b=new Book();
+ b.setbId(rs.getInt("book_id"));
+ b.setbName(rs.getString("book_name"));
+ b.setDescription(rs.getString("description"));
+ books.add(b);
+}
+con.close();  
+}catch(Exception e){ System.out.println(e);}  
+
+return books;
+}  
+
+
+}

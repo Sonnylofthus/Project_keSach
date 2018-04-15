@@ -1,0 +1,106 @@
+package com.giang.kesach.resources;
+
+import com.giang.kesach.models.Account;
+import com.giang.kesach.models.UserInfo;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class UserInfoResource implements IUserInfo {
+    private static ConnectToSql connectSql = ConnectToSql.getInstance();
+    private static Connection con = connectSql.conn;
+    private static PreparedStatement stm = null;
+    private static String sql = null;
+
+    @Override
+    public UserInfo getUserInfo(int id) {
+        UserInfo userInfo = new UserInfo();
+        try {
+            ResultSet rs = connectSql.query("select * from userinfo where accountId=" + id);
+            if (rs.next()) {
+                userInfo.setAccountId(id);
+                userInfo.setuEmail(rs.getString("email"));
+                userInfo.setuJoinDate(rs.getDate("joindate"));
+                userInfo.setuNickName(rs.getString("nickname"));
+                userInfo.setuName(rs.getString("name"));
+                userInfo.setuTelNumber(rs.getString("tel"));
+                userInfo.setuWorkPlace(rs.getString("work_place"));
+                userInfo.getAddress().setCity(rs.getString("city"));
+                userInfo.getAddress().setDistrict(rs.getString("district"));
+                userInfo.getAddress().setWard(rs.getString("ward"));
+                userInfo.getAddress().setNumber(rs.getString("number"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return userInfo;
+    }
+
+    @Override
+    public boolean createUserInfo(int accountId, UserInfo userInfo) {
+        if (isUserInfoExist(accountId))
+            return false;
+        int count = 0;
+        try {
+            stm = con.prepareStatement("INSERT INTO userinfo(accountId, email, joindate, name, nickname, tel, work_place, city, district, ward, number) VALUES " +
+                    "(?,?,?,?,?,?,?,?,?,?,?)");
+            stm.setInt(1, accountId);
+            stm.setString(2, userInfo.getuEmail());
+            stm.setDate(3, userInfo.getuJoinDate());
+            stm.setString(4, userInfo.getuName());
+            stm.setString(5, userInfo.getuTelNumber());
+            stm.setString(6, userInfo.getuWorkPlace());
+            stm.setString(7, userInfo.getAddress().getCity());
+            stm.setString(8, userInfo.getAddress().getDistrict());
+            stm.setString(9, userInfo.getAddress().getWard());
+            stm.setString(10, userInfo.getAddress().getNumber());
+            count = stm.executeUpdate();
+            if (count != 0) return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean isUserInfoExist(int accountId) {
+        try {
+            ResultSet rs = connectSql.query("select * from userinfo where accountId=" + accountId);
+            if (rs.next())
+                return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean modifyAccount(Account account) {
+        if (isUserInfoExist(account.getId())) {
+            UserInfo userInfo = account.getUserInfo();
+            int count = 0;
+            try {
+                stm = con.prepareStatement("UPDATE  userinfo SET email=?, joindate=?, name=?, nickname=?, tel=?," +
+                        " work_place=?, city=?, district=?, ward=?, number=? WHERE accountId=?");
+                stm.setString(1, userInfo.getuEmail());
+                stm.setDate(2, userInfo.getuJoinDate());
+                stm.setString(3, userInfo.getuName());
+                stm.setString(4, userInfo.getuTelNumber());
+                stm.setString(5, userInfo.getuWorkPlace());
+                stm.setString(6, userInfo.getAddress().getCity());
+                stm.setString(7, userInfo.getAddress().getDistrict());
+                stm.setString(8, userInfo.getAddress().getWard());
+                stm.setString(9, userInfo.getAddress().getNumber());
+                stm.setInt(10, account.getId());
+                count = stm.executeUpdate();
+                if (count != 0) return true;
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
+}

@@ -1,0 +1,24 @@
+package com.giang.kesach.resources;
+
+import com.giang.kesach.models.Account;
+import com.giang.kesach.models.Book;
+import com.giang.kesach.models.BookShelf;
+import com.giang.kesach.models.UserInfo;
+
+import java.util.List;
+
+public interface IUserAccount {
+
+    List<Account> getAllAccount();
+   int checkLoginInfo(Account account);
+
+    int createNewAccount(Account account);
+
+    boolean deleteAccount(Account account);
+
+   int changeAccountPassword(Account account);
+    void accountIni(Account account);
+    List<Book> showReadBook();
+    List<BookShelf> showAllBookShelf(int accountId);
+
+}

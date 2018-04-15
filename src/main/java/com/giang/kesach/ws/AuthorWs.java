@@ -1,0 +1,71 @@
+package com.giang.kesach.ws;
+
+
+import com.giang.kesach.models.Author;
+import com.giang.kesach.models.Book;
+import com.giang.kesach.resources.AuthorResource;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.util.List;
+@Path("author")
+public class AuthorWs {
+
+
+        private static final AuthorResource AR = new AuthorResource();
+
+        @POST
+        @Path("add")
+        @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+        public Response addAuthor(Author author) {
+            int count=AR.createNewAuthor(author);
+            if(count==0)
+                Response.status(Response.Status.NOT_ACCEPTABLE).build();
+            return Response.ok().build();
+        }
+
+        @GET
+        @Produces("application/json")
+        public List<Author> getAllAuthors() {
+
+            return AR.getAllAuthor();
+
+        }
+        @GET
+        @Path("{id}")
+        @Produces("application/json")
+        public Author getAuthor(@PathParam("id") int id) {
+
+        return AR.getAuthor(id);
+
+         }
+         @GET
+         @Path("{id}/books")
+         @Produces("application/json")
+         public Response getWrittenbooks(@PathParam("id") int id){
+            return Response.ok(AR.getWrittenBook(id)).build();
+         }
+        @DELETE
+        @Path("delete/{id}")
+        @Consumes({"application/json", "application/xml"})
+        public Response deleteCategory(@PathParam("id") int id) {
+            int count = AR.deleteAuthor(id);
+            if (count == 0) {
+                return Response.status(Response.Status.BAD_REQUEST).build();
+            }
+            return Response.ok().build();
+        }
+    @PUT
+    @Path("update/{id}")
+    @Consumes({MediaType.APPLICATION_JSON,MediaType.TEXT_PLAIN})
+    public Response updateAuthor(@PathParam("id") int id, Author author) {
+
+        int count = AR.modifyAuthor(id,author);
+        if (count == 0) {
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+        return Response.ok().build();
+    }
+
+    }

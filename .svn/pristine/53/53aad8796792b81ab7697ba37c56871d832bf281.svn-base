@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="kesach:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="kesach.war">
+      <element id="artifact" artifact-name="kesach:war exploded" />
+    </root>
+  </artifact>
+</component>

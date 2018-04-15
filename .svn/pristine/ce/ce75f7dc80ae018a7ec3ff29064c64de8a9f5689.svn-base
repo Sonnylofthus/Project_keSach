@@ -1,0 +1,14 @@
+package com.giang.kesach.resources;
+
+import com.giang.kesach.models.Account;
+import com.giang.kesach.models.UserInfo;
+
+
+public interface IUserInfo {
+
+    UserInfo getUserInfo(int id);
+
+    boolean createUserInfo(UserInfo userInfo);
+
+    boolean modifyAccount(Account account);
+}

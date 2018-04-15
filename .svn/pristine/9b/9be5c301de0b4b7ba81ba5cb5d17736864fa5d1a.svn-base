@@ -1,0 +1,46 @@
+package com.giang.kesach.resources;
+
+import com.giang.kesach.models.Account;
+import com.giang.kesach.models.UserInfo;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class UserInfoResource implements IUserInfo {
+    private static ConnectToSql connectSql = ConnectToSql.getInstance();
+    private static Connection con = connectSql.conn;
+    private static PreparedStatement stm = null;
+    private static String sql = null;
+    @Override
+    public UserInfo getUserInfo(int id) {
+        UserInfo userInfo =new UserInfo();
+        try {
+            ResultSet rs=connectSql.query("select * from userinfo where accountId="+id);
+            if(rs.next()){
+                userInfo.setAccountId(id);
+                userInfo.setuEmail(rs.getString("email"));
+                userInfo.setuJoinDate(rs.getDate("joindate"));
+                userInfo.setuNickName(rs.getString("nickname"));
+                userInfo.setuName(rs.getString("name"));
+                userInfo.setuTelNumber(rs.getString("tel"));
+                userInfo.setuWorkPlace(rs.getString("work_place"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return userInfo;
+    }
+
+    @Override
+    public boolean createUserInfo(UserInfo userInfo) {
+        return false;
+    }
+
+    @Override
+    public boolean modifyAccount(Account account) {
+        return false;
+    }
+}
