@@ -10,6 +10,7 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Man.java" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/GlobalResource.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/BookShelfWs.java" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/GlobalWs.java" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b1e5e5-0f4f-4266-8eb9-f65432e3b7ef.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b1e5e5-0f4f-4266-8eb9-f65432e3b7ef.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -23,6 +24,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookResource.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookShelfResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookShelfResource.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/CategoryResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/CategoryResource.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBook.java" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBook.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBookShelf.java" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBookShelf.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IUserAccount.java" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IUserAccount.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IUserInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IUserInfo.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/UserAccountResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/UserAccountResource.java" />
@@ -95,16 +98,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AccountWs.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountWs.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/AccountWs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2828">
-              <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+            <state relative-caret-position="-22">
+              <caret line="103" column="33" lean-forward="false" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookWs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/BookWs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1386">
+              <caret line="0" column="28" lean-forward="true" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IBook.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBook.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookResource.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="338" column="1" lean-forward="true" selection-start-line="338" selection-start-column="1" selection-end-line="338" selection-end-column="1" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1079#1080#0" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
+                <marker date="1523892853870" expanded="true" signature="1535:1553" ph="select * fro... book" />
+                <marker date="1523892853870" expanded="true" signature="2422:2524" ph="insert into book... " />
+                <marker date="1523892853870" expanded="true" signature="3268:3314" ph="SELECT * FRO... book" />
+                <marker date="1523892853870" expanded="true" signature="3707:3761" ph="insert into author_book... " />
+                <marker date="1523892853870" expanded="true" signature="4154:4212" ph="insert into category_book... " />
+                <marker date="1523892853870" expanded="true" signature="5428:5544" ph="update book... " />
+                <marker date="1523892853870" expanded="true" signature="6354:6563" ph="select categ... category_book" />
+                <marker date="1523892853870" expanded="true" signature="7259:7499" ph="select autho... author_book" />
+                <marker date="1523892853870" expanded="true" signature="8221:8255" ph="select * fro... book" />
+                <marker date="1523892853870" expanded="true" signature="9031:9102" ph="INSERT INTO readbook... " />
+                <marker date="1523892853870" expanded="true" signature="9380:9450" ph="INSERT INTO book_rate... " />
+                <marker date="1523892853870" expanded="true" signature="9742:9795" ph="SELECT * FRO... book" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/GlobalResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d7b1e5e5-0f4f-4266-8eb9-f65432e3b7ef/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="61" column="79" lean-forward="false" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,6 +185,7 @@
     <findStrings>
       <find>createNewA</find>
       <find>book_pulisher</find>
+      <find>alter</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -149,13 +212,10 @@
         <option value="$PROJECT_DIR$/src/main/java/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/models/ReadBook.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/ReadListResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBookShelf.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/GlobalResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/Man.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IUserAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/BookWs.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/models/BookShelf.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookShelfResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/models/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IUserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/AuthorWs.java" />
@@ -164,14 +224,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/models/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/UserInfoResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/UserAccountResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/WelcomeWs.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d7b1e5e5-0f4f-4266-8eb9-f65432e3b7ef/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/CategoryResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/AuthorResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/GlobalWs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBookShelf.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookShelfResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/BookShelfWs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IUserAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/UserAccountResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/AccountWs.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d7b1e5e5-0f4f-4266-8eb9-f65432e3b7ef/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBook.java" />
       </list>
     </option>
   </component>
@@ -206,7 +271,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="width" value="1929" />
     <option name="height" value="1030" />
   </component>
@@ -270,8 +335,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,13 +377,31 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kesach" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project_keSach" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project_keSach" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kesach" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project_keSach" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project_keSach" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kesach" type="462c0819:PsiDirectoryNode" />
               <item name="ws" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -643,12 +726,13 @@
       <workItem from="1523538936194" duration="7226000" />
       <workItem from="1523590188539" duration="796000" />
       <workItem from="1523635029318" duration="190000" />
-      <workItem from="1523776354346" duration="1477000" />
+      <workItem from="1523776354346" duration="2076000" />
+      <workItem from="1523881045103" duration="9606000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94573000" />
+    <option name="totallyTimeSpent" value="104778000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -660,32 +744,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1929" height="1030" extended-state="1" />
+    <frame x="0" y="0" width="1929" height="1030" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2139423" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17178245" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22617124" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52588236" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2139423" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27644232" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27644232" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27894452" sideWeight="0.49656525" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42067307" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2692515" sideWeight="0.49656525" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27116826" sideWeight="0.5034347" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08831449" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21109316" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52588236" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37058824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -694,7 +779,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32091346" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37860578" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -748,14 +832,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/models/ReadList.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IReadList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IWishList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -779,20 +855,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/AccountResource.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBookShelf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/GlobalResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/WishListResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1568">
@@ -818,13 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="1997" column="0" lean-forward="false" selection-start-line="1997" selection-start-column="0" selection-end-line="1997" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IUserAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -870,31 +925,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookShelfResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/models/TradeList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/models/BookShelf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/models/ReadBook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1024,79 +1058,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d7b1e5e5-0f4f-4266-8eb9-f65432e3b7ef/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="92" column="42" lean-forward="false" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
-          <folding>
-            <marker date="1523550402945" expanded="true" signature="1494:1512" ph="select * fro... book" />
-            <marker date="1523550402945" expanded="true" signature="2381:2483" ph="insert into book... " />
-            <marker date="1523550402945" expanded="true" signature="3227:3273" ph="SELECT * FRO... book" />
-            <marker date="1523550402945" expanded="true" signature="3666:3720" ph="insert into author_book... " />
-            <marker date="1523550402945" expanded="true" signature="4113:4171" ph="insert into category_book... " />
-            <marker date="1523550402945" expanded="true" signature="5387:5503" ph="update book... " />
-            <marker date="1523550402945" expanded="true" signature="6313:6522" ph="select categ... category_book" />
-            <marker date="1523550402945" expanded="true" signature="7218:7458" ph="select autho... author_book" />
-            <marker date="1523550402945" expanded="true" signature="8180:8214" ph="select * fro... book" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/UserAccountResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4788">
-          <caret line="191" column="5" lean-forward="false" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
-            <element signature="e#2641#2642#0" expanded="true" />
-            <element signature="e#2669#2670#0" expanded="true" />
-            <element signature="e#3919#3920#0" expanded="true" />
-            <element signature="e#3964#3965#0" expanded="true" />
-            <element signature="e#4503#4504#0" expanded="true" />
-            <element signature="e#4530#4531#0" expanded="true" />
-            <marker date="1523541833880" expanded="true" signature="1183:1236" ph="SELECT * FRO... account" />
-            <marker date="1523541833880" expanded="true" signature="1866:1916" ph="insert Into account... " />
-            <marker date="1523541833880" expanded="true" signature="2288:2326" ph="SELECT * FRO... account" />
-            <marker date="1523541833880" expanded="true" signature="2814:2863" ph="update account " />
-            <marker date="1523541833880" expanded="true" signature="3264:3302" ph="SELECT * fro... account" />
-            <marker date="1523541833880" expanded="true" signature="4116:4156" ph="SELECT * fro... account" />
-            <marker date="1523541833880" expanded="true" signature="5624:5667" ph="SELECT token... account" />
-            <marker date="1523541833880" expanded="true" signature="6113:6158" ph="update account... " />
-            <marker date="1523541833880" expanded="true" signature="6728:6741" ph="insert into account... " />
-            <marker date="1523541833880" expanded="true" signature="6728:6769" ph="insert into account... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/CategoryResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="125" column="26" lean-forward="true" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
-          <folding>
-            <element signature="e#3320#3321#0" expanded="false" />
-            <element signature="e#3348#3349#0" expanded="false" />
-            <marker date="1523550683016" expanded="true" signature="1749:1795" ph="select * fro... category" />
-            <marker date="1523550683016" expanded="true" signature="3514:3572" ph="SELECT * FRO... category" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/GlobalWs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1122,22 +1089,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/BookWs.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/CategoryResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="125" column="26" lean-forward="true" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
+          <folding>
+            <marker date="1523550683016" expanded="true" signature="1749:1795" ph="select * fro... category" />
+            <marker date="1523550683016" expanded="true" signature="3514:3572" ph="SELECT * FRO... category" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBookShelf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/models/BookShelf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="755">
+          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/BookShelfWs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IUserAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/UserAccountResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="206" column="9" lean-forward="false" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
+          <folding>
+            <marker date="1523886598927" expanded="true" signature="1082:1135" ph="SELECT * FRO... account" />
+            <marker date="1523886598927" expanded="true" signature="1765:1815" ph="insert Into account... " />
+            <marker date="1523886598927" expanded="true" signature="2187:2225" ph="SELECT * FRO... account" />
+            <marker date="1523886598927" expanded="true" signature="2713:2762" ph="update account " />
+            <marker date="1523886598927" expanded="true" signature="3163:3201" ph="SELECT * fro... account" />
+            <marker date="1523886598927" expanded="true" signature="4015:4055" ph="SELECT * fro... account" />
+            <marker date="1523886598927" expanded="true" signature="5449:5536" ph="insert into account_bookshelf... " />
+            <marker date="1523886598927" expanded="true" signature="5591:5653" ph="INSERT INTO bookshelf... " />
+            <marker date="1523886598927" expanded="true" signature="5591:5667" ph="INSERT INTO bookshelf... " />
+            <marker date="1523886598927" expanded="true" signature="6461:6522" ph="DELETE FROM account_bookshelf... " />
+            <marker date="1523886598927" expanded="true" signature="6632:6674" ph="DELETE FROM bookshelf... " />
+            <marker date="1523886598927" expanded="true" signature="6947:6990" ph="SELECT token... account" />
+            <marker date="1523886598927" expanded="true" signature="7443:7488" ph="update account... " />
+            <marker date="1523886598927" expanded="true" signature="8058:8071" ph="insert into account... " />
+            <marker date="1523886598927" expanded="true" signature="8058:8099" ph="insert into account... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookShelfResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="62" column="32" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+          <folding>
+            <marker date="1523885081657" expanded="true" signature="1656:1722" ph="INSERT INTO readbook_bookshelf... " />
+            <marker date="1523885081657" expanded="true" signature="2107:2172" ph="DELETE FROM readbook_bookshelf... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d7b1e5e5-0f4f-4266-8eb9-f65432e3b7ef/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="61" column="79" lean-forward="false" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/models/ReadBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/GlobalResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/AccountWs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2828">
-          <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+        <state relative-caret-position="-22">
+          <caret line="103" column="33" lean-forward="false" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/ws/BookWs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1386">
+          <caret line="0" column="28" lean-forward="true" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/IBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/giang/kesach/resources/BookResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="338" column="1" lean-forward="true" selection-start-line="338" selection-start-column="1" selection-end-line="338" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
+            <marker date="1523892853870" expanded="true" signature="1535:1553" ph="select * fro... book" />
+            <marker date="1523892853870" expanded="true" signature="2422:2524" ph="insert into book... " />
+            <marker date="1523892853870" expanded="true" signature="3268:3314" ph="SELECT * FRO... book" />
+            <marker date="1523892853870" expanded="true" signature="3707:3761" ph="insert into author_book... " />
+            <marker date="1523892853870" expanded="true" signature="4154:4212" ph="insert into category_book... " />
+            <marker date="1523892853870" expanded="true" signature="5428:5544" ph="update book... " />
+            <marker date="1523892853870" expanded="true" signature="6354:6563" ph="select categ... category_book" />
+            <marker date="1523892853870" expanded="true" signature="7259:7499" ph="select autho... author_book" />
+            <marker date="1523892853870" expanded="true" signature="8221:8255" ph="select * fro... book" />
+            <marker date="1523892853870" expanded="true" signature="9031:9102" ph="INSERT INTO readbook... " />
+            <marker date="1523892853870" expanded="true" signature="9380:9450" ph="INSERT INTO book_rate... " />
+            <marker date="1523892853870" expanded="true" signature="9742:9795" ph="SELECT * FRO... book" />
           </folding>
         </state>
       </provider>

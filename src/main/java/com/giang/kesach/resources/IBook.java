@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.util.List;
 
 import com.giang.kesach.models.Book;
-
+import com.giang.kesach.models.ReadBook;
 
 
 public interface IBook {
@@ -18,7 +18,9 @@ public interface IBook {
 		
 		return null;
 	}
+	void addToReadList(int accountId,long bId,String comment);
+	void rateBook(int accountId,long bId,short star);
 	public int deleteBook(long id);
 	public int modifyBook(long id,Book book);
-
+	List<Book> getMostReadBook();
 }

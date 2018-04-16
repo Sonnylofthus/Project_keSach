@@ -16,8 +16,8 @@ public interface IUserAccount {
     boolean deleteAccount(Account account);
 
    int changeAccountPassword(Account account);
-    Account accountIni(Account account);
-
+   int createNewBookShelf(int accountId,BookShelf bookShelf);
+   void deleteBookShelf(int accountId,int shelfId);
     List<BookShelf> showAllBookShelf(int accountId);
 
 }

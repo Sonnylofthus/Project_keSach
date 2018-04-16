@@ -5,10 +5,7 @@ import com.giang.kesach.models.Book;
 import com.giang.kesach.models.BookShelf;
 import com.giang.kesach.models.ReadBook;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -148,10 +145,7 @@ public class UserAccountResource implements IUserAccount {
         return account;
     }
 
-    @Override
-    public Account accountIni(Account account) {
-        return null;
-    }
+
 
     @Override
     public List<BookShelf> showAllBookShelf(int accountId) {
@@ -172,7 +166,48 @@ public class UserAccountResource implements IUserAccount {
         }
         return bookShelves;
     }
-    private long getToken(int id){
+    @Override
+    public int createNewBookShelf(int accountId, BookShelf bookShelf){
+        int shelfId=0;
+
+        sql = "insert into account_bookshelf(Account_account_id, bookShelfs_bookshelf_id) VALUES (?,?)";
+        try {
+            stm=con.prepareStatement("INSERT INTO bookshelf(bookshelf_name, description, account_id)VALUES (?,?,?)",Statement.RETURN_GENERATED_KEYS);
+            stm.setString(1,bookShelf.getbName());
+            stm.setString(2,bookShelf.getDescription());
+            stm.setInt(3,accountId);
+            stm.executeUpdate();
+            ResultSet rs = stm.getGeneratedKeys();
+            if (rs.next()) {
+                shelfId=rs.getInt("bookshelf_id");
+            }
+            stm = con.prepareStatement(sql);
+            stm.setInt(1,accountId);
+            stm.setInt(2,shelfId);
+            stm.executeUpdate();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return shelfId;
+    }
+
+    @Override
+    public void deleteBookShelf(int accountId, int shelfId) {
+
+        try {
+            stm=con.prepareStatement("DELETE FROM account_bookshelf WHERE bookShelfs_bookshelf_id=?");
+            stm.setInt(1,shelfId);
+            stm.executeUpdate();
+            stm=con.prepareStatement("DELETE FROM bookshelf WHERE bookshelf_id=?");
+            stm.setInt(1,shelfId);
+            stm.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static long getToken(int id){
         long token=0;
         try {
             stm=con.prepareStatement("SELECT token from account WHERE account_id="+id);
@@ -185,7 +220,7 @@ public class UserAccountResource implements IUserAccount {
         }
         return token;
     }
-    public boolean isTokenCorrect(int id,long token){
+    public static boolean isTokenCorrect(int id,long token){
 
        return ((token!=0)&&token==getToken(id));
 

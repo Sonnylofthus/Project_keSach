@@ -11,6 +11,7 @@ import java.util.List;
 import com.giang.kesach.models.Author;
 import com.giang.kesach.models.Book;
 import com.giang.kesach.models.Category;
+import com.giang.kesach.models.ReadBook;
 
 public class BookResource implements IBook {
 	private static ConnectToSql connectSql = ConnectToSql.getInstance();
@@ -293,5 +294,46 @@ public class BookResource implements IBook {
 			e.printStackTrace();
 		}	
 		return book;
+	}
+
+	@Override
+	public void addToReadList(int accountId, long bId,String comment) {
+		try {
+			stm=con.prepareStatement("INSERT INTO readbook(readerComment, book_id, account_id) VALUES (?,?,?)");
+			stm.setString(1,comment);
+			stm.setLong(2,bId);
+			stm.setInt(3,accountId);
+			stm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void rateBook(int accountId, long bId, short star) {
+		try {
+			stm=con.prepareStatement("INSERT INTO book_rate(rated_book_id, acccount_id, star) VALUES (?,?,?)");
+			stm.setLong(1,bId);
+			stm.setInt(2,accountId);
+			stm.setShort(3,star);
+			stm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public List<Book> getMostReadBook() {
+		List<Book> topBook=new ArrayList<>();
+		try {
+			stm=con.prepareStatement("SELECT * FROM  book ORDER BY readCount DESC LIMIT 100");
+			ResultSet rs=stm.executeQuery();
+			while (rs.next()){
+				topBook.add(getBookFromDB(rs));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return topBook;
 	}
 }

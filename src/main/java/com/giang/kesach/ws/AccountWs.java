@@ -1,6 +1,7 @@
 package com.giang.kesach.ws;
 
 import com.giang.kesach.models.Account;
+import com.giang.kesach.models.BookShelf;
 import com.giang.kesach.models.UserInfo;
 import com.giang.kesach.resources.BookShelfResource;
 import com.giang.kesach.resources.ReadListResource;
@@ -89,9 +90,19 @@ public class AccountWs {
         return Response.ok(UAR.showAllBookShelf(id)).build();
     }
 
-
-
-
+    @POST
+    @Path("{id}/bookshelves/new")
+    @Produces("application/json")
+    public Response createNewBookShelf(@PathParam("id")int accountId, BookShelf bookShelf){
+        return Response.ok(UAR.createNewBookShelf(accountId,bookShelf)).build();
+    }
+    @DELETE
+    @Path("{id}/bookshelves/{idShelf}/delete")
+    public Response removeBookFromShelf(@PathParam("id")int accountId,@PathParam("idShelf") int idShelf,@HeaderParam("token")long token){
+    if(UserAccountResource.isTokenCorrect(accountId,token))
+        UAR.deleteBookShelf(accountId,idShelf);
+    return Response.ok().build();
+    }
     @POST
     @Path("new")
     @Consumes({"application/json","application/xml"})
