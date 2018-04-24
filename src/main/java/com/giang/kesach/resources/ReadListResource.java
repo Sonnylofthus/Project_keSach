@@ -17,8 +17,8 @@ public class ReadListResource implements IReadList {
     private static String sql = null;
 
     @Override
-    public List<Book> getReadList(int account_id) {
-            List<Book> readList= new ArrayList<>();
+    public List<ReadBook> getReadList(int account_id) {
+            List<ReadBook> readList= new ArrayList<>();
         try {
             ResultSet rs = connectSql.query("select readbook.readerComment,readbook.account_id,readbook.book_id,book.book_name,\n" +
                     "book.description,book.img_link,book.book_published_year,book.book_publisher\n" +

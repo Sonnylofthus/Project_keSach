@@ -2,14 +2,23 @@ package com.giang.kesach.models;
 
 
 //@Inheritance(strategy=InheritanceType.JOINED)
-public class OwnBook extends ReadBook{
+public class OwnBook extends Book{
 	/**
 	 * 
 	 */
 	
 	private String imgLink;
+	private int accountId;
 
-	private Account bAccount;
+	public int getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(int accountId) {
+		this.accountId = accountId;
+	}
+
+
 	
 	public String getImgLink() {
 		return imgLink;
@@ -17,11 +26,6 @@ public class OwnBook extends ReadBook{
 	public void setImgLink(String imgLink) {
 		this.imgLink = imgLink;
 	}
-	public Account getbAccount() {
-		return bAccount;
-	}
-	public void setbAccount(Account bAccount) {
-		this.bAccount = bAccount;
-	}
+
 	
 }

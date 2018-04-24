@@ -2,13 +2,16 @@ package com.giang.kesach.resources;
 
 import com.giang.kesach.models.Book;
 import com.giang.kesach.models.Category;
+import com.giang.kesach.models.ReadBook;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class CategoryResource implements ICategory {
     private static ConnectToSql connectSql = ConnectToSql.getInstance();
@@ -145,6 +148,14 @@ public class CategoryResource implements ICategory {
         }
         return books;
     }
-
+    public static List<Category> getRelatedGenre(int accountId){
+        Set<Category> categories=new HashSet<>();
+        ReadListResource RL=new ReadListResource();
+        List<ReadBook> bookList=RL.getReadList(accountId);
+        for(Book book:bookList){
+            categories.addAll(book.getCategory());
+        }
+        return new ArrayList<>(categories);
+    }
 
 }

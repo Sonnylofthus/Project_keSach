@@ -38,14 +38,6 @@ public class BookWs {
     @Produces(MediaType.APPLICATION_JSON)
     public Response addBook(Book book) {
         long id=0;
-        Book newBook=new Book();
-//        newBook.setAuthors(book.getAuthors());
-//        newBook.setbName(book.getbName());
-//        newBook.setCategory(book.getCategory());
-//        newBook.setDescription(book.getDescription());
-//        newBook.setPulisher(book.getPulisher());
-//        newBook.setPulishYear(book.getPulishYear());
-//        newBook.setImgLink(book.getImgLink());
         id=BR.createNewBook(book);
         if(id!=0)
         return Response.ok(BR.getBook(id)).build();
@@ -54,10 +46,9 @@ public class BookWs {
 
     @DELETE
     @Path("{id}")
-    @Consumes(MediaType.TEXT_PLAIN)
-    public Response deleteBook(@PathParam("id") long id,@HeaderParam("token") String token) {
-        if(!(token.equals("1234")))
-            return Response.status(Response.Status.BAD_REQUEST).build();
+
+    public Response deleteBook(@PathParam("id") long id) {
+
         int count = BR.deleteBook(id);
         if (count == 0) {
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -69,12 +60,12 @@ public class BookWs {
     @PUT
     @Path("change/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response updateBook(@PathParam("id") int id, Book book) {
+    public Response updateBook(@PathParam("id") long id, Book book) {
 
         int count = BR.modifyBook(id, book);
         if (count == 0) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
-        return Response.ok().build();
+        return Response.ok(BR.getBook(id)).build();
     }
 }

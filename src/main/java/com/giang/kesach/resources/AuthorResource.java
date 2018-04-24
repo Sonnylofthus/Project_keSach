@@ -83,8 +83,10 @@ public class AuthorResource implements IAuthor {
     public Author getAuthor(String name) {
         Author author=new Author();
         try {
-            ResultSet rs=connectSql.query("select * from author where author_name=\" "+name+"\"" );
-            getAuthorFromDataBase(rs);
+            stm=con.prepareStatement("select * from author where author_name=?");
+            stm.setString(1,name);
+            ResultSet rs=stm.executeQuery();
+            author=getAuthorFromDataBase(rs);
 
         } catch (SQLException e) {
             e.printStackTrace();

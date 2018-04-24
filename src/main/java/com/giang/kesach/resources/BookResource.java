@@ -105,36 +105,40 @@ public class BookResource implements IBook {
 		}
 		return books;
 	}
-	private static List<Author> mapAuthorToBook(long bId, List<Author> author) {
-
-		for (Author a : author) {
+	private static void mapAuthorToBook(long bId, List<Author> authors) {
+      AuthorResource authorResource=new AuthorResource();
+		for (Author a : authors) {
 			if (!AuthorResource.isExist(a)) {
 				AR.createNewAuthor(a);
+			}
+			Author author = authorResource.getAuthor(a.getaName());
 
 				sql = "insert into author_book(book_id,author_id) values(?,?)";
 
 				try {
 					stm = con.prepareStatement(sql);
 					stm.setLong(1, bId);
-					stm.setInt(2, a.getaId());
+					stm.setInt(2,author.getaId());
 					stm.execute();
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
+
 			}
 		}
-		return author;
+
+
 	}
 
 	private static List<Category> mapCategoryToBook(long bId, List<Category> category) {
+		CategoryResource categoryResource=new CategoryResource();
 		for (Category cat : category) {
+			cat.setcId(categoryResource.getCategory(cat.getName()).getcId());
 			sql = "insert into category_book(book_id,category_id) values(?,?)";
-
 			try {
 				stm = con.prepareStatement(sql);
 				stm.setLong(1, bId);
-				stm.setInt(2, cat.getcId());
+				stm.setInt(2,cat.getcId());
 				stm.execute();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -149,7 +153,7 @@ public class BookResource implements IBook {
 		int count = 0;
 		// TODO Auto-generated method stub
 		sql = "delete from book where book_id=?";
-		count = getCount(id, count);
+		count = getCount(id,sql);
 		unmapAuthorBook(id);
 		unmapCategoryBook(id);
 
@@ -159,12 +163,11 @@ public class BookResource implements IBook {
 
 	public static int unmapAuthorBook(long id) {
 		sql = "delete from author_book where book_id=?";
-		int count = 0;
-		count = getCount(id, count);
-		return count;
+		return getCount(id,sql);
 	}
 
-	private static int getCount(long id, int count) {
+	private static int getCount(long id, String sql) {
+		int count=0;
 		try {
 			stm = con.prepareStatement(sql);
 			stm.setLong(1, id);
@@ -178,9 +181,7 @@ public class BookResource implements IBook {
 
 	public static int unmapCategoryBook(long id) {
 		sql = "delete from category_book where book_id=?";
-		int count = 0;
-		count = getCount(id, count);
-		return count;
+		return getCount(id,sql);
 	}
 
 	@Override
@@ -202,6 +203,10 @@ public class BookResource implements IBook {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+//		AuthorResource authorResource=new AuthorResource();
+//		for(Author author:book.getAuthors()) {
+//			authorResource.modifyAuthor(author.getaId(),)
+//		}
 		unmapAuthorBook(bId);
 		unmapCategoryBook(bId);
 		mapAuthorToBook(bId, book.getAuthors());
@@ -250,7 +255,7 @@ public class BookResource implements IBook {
 			while (rs.next()) {
 				Author a = new Author();
 				a.setaBirthDay(rs.getInt("author_birthday"));
-				a.setaId(rs.getInt(1));
+				a.setaId(rs.getInt("author_id"));
 				a.setaName(rs.getString("author_name"));
 				a.setaDescription(rs.getString("author_description"));
 				authors.add(a);
